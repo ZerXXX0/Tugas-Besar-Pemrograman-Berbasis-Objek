@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center vertically */
+}
+
+.logo img {
+    width: 150px;  /* Adjust logo size */
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Ensure navigation items stay at the right */
+    flex-grow: 1; /* Make navigation take up the remaining space */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6b6b;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #ff6b6b; /* Change background color to pink on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+nav ul li a.login-link {
+    border: 2px solid #ff6b6b; /* Pink border for login link */
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 40px;
+    background-color: #f9f9f9;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    color: #ff6b6b;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Styling for Get Started Now button */
+.hero .btn {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 20px 40px; /* Increased padding to make the button larger */
+    font-size: 1.5rem; /* Increased font size */
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for Get Started Now button */
+.hero .btn:hover {
+    background-color: #e55b5b; /* Darker pink on hover */
+    color: #fff; /* Ensure the text stays white on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Styling the icon set image */
+.hero-icons-set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-set-img {
+    width: 500px;  /* Adjust the size as per your design */
+    height: auto;
+}

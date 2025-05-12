@@ -75,6 +75,4 @@ public class DB {
         }
         return rs;
     }
-    
 }
-
