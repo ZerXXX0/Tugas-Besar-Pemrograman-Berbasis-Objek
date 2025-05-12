@@ -4,10 +4,47 @@
  */
 package model;
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
 /**
  *
  * @author Fathan Fardian Sanum
  */
-public class ToDoItem {
+
+public class ToDoItem extends Task {
+    private LocalDateTime dueDate;
+    private int priority;
     
+    
+
+    public ToDoItem(String title, LocalDateTime dueDate, int priority) {
+        super(title);
+        this.dueDate = dueDate;
+        this.priority = priority;
+    }
+
+    public LocalDateTime getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDateTime dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public void markComplete() {
+        
+    }
+    
+    public void setReminder() {
+        
+    }
 }
