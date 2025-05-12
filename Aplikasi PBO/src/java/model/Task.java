@@ -10,12 +10,21 @@ import java.time.LocalDateTime;
  *
  * @author Fathan Fardian Sanum
  */
-public class Task {
+public abstract class Task {
+    private int id;  // Untuk Database
     private String title;
     private Reminder reminder;
 
     public Task(String title) {
         this.title = title;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -36,5 +45,27 @@ public class Task {
 
     public void setReminder(String message, LocalDateTime time) {
         this.reminder = new Reminder(message, time);
+    }
+
+    public abstract void setReminder();
+
+    public void insertTask(DB db) {
+        String query = "INSERT INTO Task (title) VALUES ('" + this.title + "')";
+        db.runQuery(query);
+    }
+
+    public static Task getTaskById(DB db, int taskId) {
+        Task task = null;
+        String query = "SELECT * FROM Task WHERE id = " + taskId;
+        ResultSet rs = db.getData(query);
+        try {
+            if (rs.next()) {
+                task = new Task(rs.getString("title"));
+                task.setId(rs.getInt("id"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return task;
     }
 }
