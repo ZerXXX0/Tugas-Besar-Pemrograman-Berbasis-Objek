@@ -4,8 +4,11 @@
  */
 package model;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *

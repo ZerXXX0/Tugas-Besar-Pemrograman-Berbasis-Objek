@@ -4,7 +4,11 @@
  */
 package model;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 
 /**
  *
@@ -60,7 +64,12 @@ public abstract class Task {
         ResultSet rs = db.getData(query);
         try {
             if (rs.next()) {
-                task = new Task(rs.getString("title"));
+                task = new Task(rs.getString("title")) {
+                    @Override
+                    public void setReminder() {
+                        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                    }
+                };
                 task.setId(rs.getInt("id"));
             }
         } catch (SQLException e) {

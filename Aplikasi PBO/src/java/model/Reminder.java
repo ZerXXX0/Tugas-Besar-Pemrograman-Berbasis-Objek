@@ -6,6 +6,9 @@ package model;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  *
  * @author Fathan Fardian Sanum
