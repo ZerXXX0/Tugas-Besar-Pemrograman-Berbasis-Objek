@@ -30,17 +30,76 @@
     </header>
 
     <section class="hero">
-        <div class="hero-text">
-            <h1>Manage your day with your very own digital personal assistant</h1>
-            <p>Our application helps people grow and succeed with their lives through digital personal assistant. We help people manage their daily, works, schedule, etc.</p>
-            <a href="#" class="btn">Get Started Now</a>
-        </div>
-        <!-- Grouped Icons Section as an image -->
-        <div class="hero-icons-set">
-            <img src="assets/DashboardImage.png" alt="Icons Set" class="icon-set-img">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Manage your day with your very own digital personal assistant</h1>
+                <p>Our application helps people grow and succeed with their lives through digital personal assistant. We help people manage their daily, works, schedule, etc.</p>
+                <a href="#" class="btn">Get Started Now</a>
+            </div>
+            <div class="hero-icons">
+                <img src="assets/DashboardImage.png" alt="Icons Set" class="icon-set-img">
+            </div>
         </div>
     </section>
+
+    <!-- Features Section with 4 boxes -->
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature-boxes">
+            <div class="feature-box1">
+                <div class="feature-icon">
+                    <img src="assets/IconNote.png" alt="Note Icon">
+                </div>
+                <div class="feature-content">
+                    <h3>Note and Voice Note</h3>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="feature-logo">
+                    <img src="assets/LogoPanah1.png" alt="Logo" class="feature-logo-img">
+                </div>
+            </div>
+            <div class="feature-box2">
+                <div class="feature-icon">
+                    <img src="assets/IconToDo.png" alt="To-Do List Icon">
+                </div>
+                <div class="feature-content">
+                    <h3>To-Do List</h3>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="feature-logo">
+                    <img src="assets/LogoPanah2.png" alt="Logo" class="feature-logo-img">
+                </div>
+            </div>
+            <div class="feature-box2">
+                <div class="feature-icon">
+                    <img src="assets/IconReminder.png" alt="Reminder Icon">
+                </div>
+                <div class="feature-content">
+                    <h3>Daily Reminder</h3>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="feature-logo">
+                    <img src="assets/LogoPanah2.png" alt="Logo" class="feature-logo-img">
+                </div>
+            </div>
+            <div class="feature-box1">
+                <div class="feature-icon">
+                    <img src="assets/IconAlarm.png" alt="Alarm Icon">
+                </div>
+                <div class="feature-content">
+                    <h3>Alarm Clock</h3>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="feature-logo">
+                    <img src="assets/LogoPanah1.png" alt="Logo" class="feature-logo-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Assistify. All rights reserved.</p>
+        <p>Powered by <a href="#">Assistify Technologies</a></p>
+    </footer>
 </body>
 </html>
-
-
