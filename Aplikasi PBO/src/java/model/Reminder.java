@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
  *
  * @author Fathan Fardian Sanum
  */
-public class Reminder {
+public class Reminder implements Inotifiable {
     private String message;
     private LocalDateTime time;
 
