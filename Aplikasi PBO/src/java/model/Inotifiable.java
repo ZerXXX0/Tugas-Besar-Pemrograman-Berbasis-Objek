@@ -8,6 +8,6 @@ package model;
  *
  * @author Fathan Fardian Sanum
  */
-public class Inotifiable {
-    
+interface Inotifiable {
+    public abstract void sendNotification();
 }
