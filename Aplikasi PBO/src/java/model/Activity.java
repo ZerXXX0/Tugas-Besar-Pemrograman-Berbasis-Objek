@@ -19,7 +19,6 @@ public class Activity extends Task {
     private LocalDateTime startTime;
     private LocalDateTime endTime;
 
-    // Constructor to initialize an Activity
     public Activity(String title, String description, LocalDateTime startTime, LocalDateTime endTime) {
         super(title);
         this.description = description;
@@ -27,7 +26,6 @@ public class Activity extends Task {
         this.endTime = endTime;
     }
 
-    // Constructor for retrieving Activity from the database
     public Activity(int id, String title, String description, LocalDateTime startTime, LocalDateTime endTime) {
         super(title);
         this.setId(id);
@@ -36,7 +34,6 @@ public class Activity extends Task {
         this.endTime = endTime;
     }
 
-    // Getter and setter for description
     public String getDescription() {
         return description;
     }
@@ -45,7 +42,6 @@ public class Activity extends Task {
         this.description = description;
     }
 
-    // Getter and setter for startTime
     public LocalDateTime getStartTime() {
         return startTime;
     }
@@ -54,7 +50,6 @@ public class Activity extends Task {
         this.startTime = startTime;
     }
 
-    // Getter and setter for endTime
     public LocalDateTime getEndTime() {
         return endTime;
     }
@@ -63,19 +58,16 @@ public class Activity extends Task {
         this.endTime = endTime;
     }
 
-    // Implement the abstract setReminder method
     @Override
     public void setReminder() {
         System.out.println("Setting reminder for Activity: " + getTitle());
     }
 
-    // Insert the Activity into the database
     public void insertActivity(DB db) {
         String query = "INSERT INTO Activity (title, description, start_time, end_time, task_id) VALUES ('" + this.getTitle() + "', '" + this.description + "', '" + Timestamp.valueOf(this.startTime) + "', '" + Timestamp.valueOf(this.endTime) + "', " + this.getId() + ")";
         db.runQuery(query);
     }
 
-    // Get the Activity by ID from the database
     public static Activity getActivityById(DB db, int id) {
         Activity activity = null;
         String query = "SELECT * FROM Activity WHERE id = " + id;

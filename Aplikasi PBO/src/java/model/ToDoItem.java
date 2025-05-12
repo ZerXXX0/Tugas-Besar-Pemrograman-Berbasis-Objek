@@ -19,14 +19,12 @@ public class ToDoItem extends Task {
     private LocalDateTime dueDate;
     private int priority;
 
-    // Constructor to initialize a ToDoItem
     public ToDoItem(String title, LocalDateTime dueDate, int priority) {
         super(title);
         this.dueDate = dueDate;
         this.priority = priority;
     }
 
-    // Constructor for retrieving ToDoItem from the database
     public ToDoItem(int id, String title, LocalDateTime dueDate, int priority) {
         super(title);
         this.setId(id);
@@ -34,7 +32,6 @@ public class ToDoItem extends Task {
         this.priority = priority;
     }
 
-    // Getter and setter for dueDate
     public LocalDateTime getDueDate() {
         return dueDate;
     }
@@ -43,7 +40,6 @@ public class ToDoItem extends Task {
         this.dueDate = dueDate;
     }
 
-    // Getter and setter for priority
     public int getPriority() {
         return priority;
     }
@@ -52,24 +48,20 @@ public class ToDoItem extends Task {
         this.priority = priority;
     }
 
-    // Mark the task as completed
     public void markComplete() {
         System.out.println("Task '" + getTitle() + "' marked as completed.");
     }
 
-    // Implement the abstract setReminder method
     @Override
     public void setReminder() {
         System.out.println("Setting reminder for ToDoItem: " + getTitle());
     }
 
-    // Insert the ToDoItem into the database
     public void insertToDoItem(DB db) {
         String query = "INSERT INTO ToDoItem (title, due_date, priority, task_id) VALUES ('" + this.getTitle() + "', '" + Timestamp.valueOf(this.dueDate) + "', " + this.priority + ", " + this.getId() + ")";
         db.runQuery(query);
     }
 
-    // Get the ToDoItem by ID from the database
     public static ToDoItem getToDoItemById(DB db, int id) {
         ToDoItem toDoItem = null;
         String query = "SELECT * FROM ToDoItem WHERE id = " + id;
