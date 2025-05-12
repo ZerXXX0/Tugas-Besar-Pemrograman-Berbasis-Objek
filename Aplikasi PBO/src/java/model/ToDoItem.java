@@ -16,8 +16,6 @@ public class ToDoItem extends Task {
     private LocalDateTime dueDate;
     private int priority;
     
-    
-
     public ToDoItem(String title, LocalDateTime dueDate, int priority) {
         super(title);
         this.dueDate = dueDate;
@@ -41,10 +39,11 @@ public class ToDoItem extends Task {
     }
 
     public void markComplete() {
-        
+        System.out.println("Task '" + getTitle() + "' marked as completed.");
     }
     
+    @Override
     public void setReminder() {
-        
+        System.out.println("Setting reminder for ToDoItem: " + getTitle());
     }
 }

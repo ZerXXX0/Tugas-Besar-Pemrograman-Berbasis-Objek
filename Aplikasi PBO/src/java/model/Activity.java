@@ -44,7 +44,8 @@ public class Activity extends Task {
         this.endTime = endTime;
     }
 
+    @Override
     public void setReminder() {
-       
+        System.out.println("Setting reminder for Activity: " + getTitle());
     }
 }

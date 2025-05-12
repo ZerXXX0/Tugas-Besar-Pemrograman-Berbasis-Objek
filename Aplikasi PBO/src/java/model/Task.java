@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Fathan Fardian Sanum
@@ -32,7 +34,7 @@ public class Task {
         this.reminder = reminder;
     }
 
-    public void setReminder() {
-       
+    public void setReminder(String message, LocalDateTime time) {
+        this.reminder = new Reminder(message, time);
     }
 }
