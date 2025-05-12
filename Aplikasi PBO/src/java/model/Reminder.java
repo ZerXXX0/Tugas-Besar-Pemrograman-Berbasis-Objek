@@ -38,7 +38,8 @@ public class Reminder implements Inotifiable {
         this.message = message;
         this.time = time;
     }
-
+    
+    @Override
     public void sendNotification() {
         System.out.println("Reminder: " + message + " at " + time);
     }
