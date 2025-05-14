@@ -35,7 +35,7 @@
             <div class="hero-text">
                 <h1>Manage your day with your very own digital personal assistant</h1>
                 <p>Our application helps people grow and succeed with their lives through digital personal assistant. We help people manage their daily, works, schedule, etc.</p>
-                <a href="#" class="btn">Get Started Now</a>
+                <a href="registration_page.jsp" class="btn">Get Started Now</a>
             </div>
             <div class="hero-icons">
                 <img src="assets/DashboardImage.png" alt="Icons Set" class="icon-set-img">

@@ -33,7 +33,8 @@
 
                 <button type="submit">Log In</button>
             </form>
-            <p class="signup-link">Don't have an account? <a href="#">Click here</a></p>
+            <p class="signup-link">Don't have an account? <a href="registration_page.jsp">Click here</a></p>
+
         </div>
     </section>
 
