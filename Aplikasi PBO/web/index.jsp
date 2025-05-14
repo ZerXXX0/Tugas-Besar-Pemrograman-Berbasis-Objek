@@ -48,51 +48,59 @@
         <h2>Features</h2>
         <div class="feature-boxes">
             <div class="feature-box1">
+                <h3>Note and Voice Note</h3>
                 <div class="feature-icon">
-                    <img src="assets/IconNote.png" alt="Note Icon" style="width: 200px">
+                    <img src="assets/IconNote.png" alt="Note Icon">
                 </div>
                 <div class="feature-content">
-                    <h3>Note and Voice Note</h3>
-                    <a href="#">Learn more</a>
+                    
+                    
                 </div>
                 <div class="feature-logo">
                     <img src="assets/LogoPanah1.png" alt="Logo" class="feature-logo-img">
+                    <a href="#">Learn more</a>
                 </div>
             </div>
             <div class="feature-box2">
+                <h3>To-Do List</h3>
                 <div class="feature-icon">
-                    <img src="assets/IconToDo.png" alt="To-Do List Icon" style="width: 200px">
+                    <img src="assets/IconToDo.png" alt="To-Do List Icon">
                 </div>
                 <div class="feature-content">
-                    <h3>To-Do List</h3>
-                    <a href="#">Learn more</a>
+                    
+                    
                 </div>
                 <div class="feature-logo">
                     <img src="assets/LogoPanah2.png" alt="Logo" class="feature-logo-img">
+                    <a href="#">Learn more</a>
                 </div>
             </div>
             <div class="feature-box2">
+                <h3>Daily Reminder</h3>
                 <div class="feature-icon">
-                    <img src="assets/IconReminder.png" alt="Reminder Icon" style="width: 200px">
+                    <img src="assets/IconReminder.png" alt="Reminder Icon">
                 </div>
                 <div class="feature-content">
-                    <h3>Daily Reminder</h3>
-                    <a href="#">Learn more</a>
+                    
+                    
                 </div>
                 <div class="feature-logo">
                     <img src="assets/LogoPanah2.png" alt="Logo" class="feature-logo-img">
+                    <a href="#">Learn more</a>
                 </div>
             </div>
             <div class="feature-box1">
+                <h3>Alarm Clock</h3>
                 <div class="feature-icon">
-                    <img src="assets/IconAlarm.png" alt="Alarm Icon" style="width: 200px">
+                    <img src="assets/IconAlarm.png" alt="Alarm Icon">
                 </div>
                 <div class="feature-content">
-                    <h3>Alarm Clock</h3>
-                    <a href="#">Learn more</a>
+                    
+                    
                 </div>
                 <div class="feature-logo">
                     <img src="assets/LogoPanah1.png" alt="Logo" class="feature-logo-img">
+                    <a href="#">Learn more</a>
                 </div>
             </div>
         </div>
