@@ -25,7 +25,7 @@
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Use Cases</a></li>
                 <li><a href="#">Feature</a></li>
-                <li><a href="#" class="login-link">Log In</a></li>
+                <li><a href="login_page.jsp" class="login-link">Log In</a></li>
             </ul>
         </nav>
     </header>
