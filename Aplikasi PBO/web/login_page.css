@@ -113,6 +113,7 @@ nav ul li a:hover {
 
 .login-container button:hover {
     background-color: #FF3B65;
+    border: 2px solid white;
     color: white;
     transform: scale(1.05);
 }
