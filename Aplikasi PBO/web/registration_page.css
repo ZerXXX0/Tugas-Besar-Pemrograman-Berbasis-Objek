@@ -61,7 +61,8 @@ header {
 
 .register-container input {
     width: 100%;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -69,7 +70,7 @@ header {
 }
 
 .register-container button {
-    width: 100%;
+    width: 101.5%;
     padding: 10px;
     background-color: #ffffff;
     color: #FF3B65;
