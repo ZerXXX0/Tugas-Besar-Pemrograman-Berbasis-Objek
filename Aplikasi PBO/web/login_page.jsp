@@ -17,7 +17,9 @@
 <body>
     <header>
         <div class="logo">
-            <img src="assets/Logo.png" alt="ASSISTIFY Logo"> <!-- Logo image -->
+            <a href="index.jsp">
+                <img src="assets/Logo.png" alt="ASSISTIFY Logo"> <!-- Logo image -->
+            </a>
         </div>
     </header>
 
