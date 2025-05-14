@@ -148,7 +148,6 @@ nav ul li a.login-link {
     text-align: left;
 }
 
-
 .feature-box1, .feature-box2 {
     background-color: white;
     border: 2px solid #000;
@@ -156,9 +155,9 @@ nav ul li a.login-link {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    display: grid; /* Use grid for left-right column layout */
-    grid-template-columns: 1fr 1fr; /* Two columns, each taking 50% of the space */
-    align-items: center;
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: space-between;
 }
 
 .feature-box2 {
@@ -173,31 +172,24 @@ nav ul li a.login-link {
     transform: scale(1.05);
 }
 
-.feature-box1 h3 {
+.feature-box1 h3, .feature-box2 h3 {
     color: #FF3B65;
     font-size: 1.5rem;
     margin-bottom: 10px;
-}
-.feature-box2 h3 {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    align-self: flex-start; /* Align the title to the top-left */
 }
 
-.feature-box1 a {
+.feature-box1 a, .feature-box2 a {
     color: #FF3B65;
     text-decoration: none;
     font-weight: bold;
     margin-top: 15px;
     display: inline-block;
+    text-align: left;
 }
 
 .feature-box2 a {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 15px;
-    display: inline-block;
 }
 
 .feature-box1 a:hover {
@@ -210,14 +202,18 @@ nav ul li a.login-link {
 
 .feature-icon {
     display: flex;
-    justify-content: center; /* Center the icon */
+    justify-content: center;
     align-items: center;
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .feature-logo {
     display: flex;
     justify-content: flex-start;
-    margin-top: 10px;
+    align-items: center;
+    margin-top: 15px;
 }
 
 .feature-icon img {
