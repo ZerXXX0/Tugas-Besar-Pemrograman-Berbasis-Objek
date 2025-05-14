@@ -67,6 +67,7 @@ header {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 
 .register-container button {
@@ -83,6 +84,7 @@ header {
 
 .register-container button:hover {
     background-color: #FF3B65;
+    border: 2px solid white;
     color: white;
     transform: scale(1.05);
 }
