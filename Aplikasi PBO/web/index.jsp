@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASSISTIFY - Digital Personal Assistant</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -48,7 +49,7 @@
         <div class="feature-boxes">
             <div class="feature-box1">
                 <div class="feature-icon">
-                    <img src="assets/IconNote.png" alt="Note Icon">
+                    <img src="assets/IconNote.png" alt="Note Icon" style="width: 200px">
                 </div>
                 <div class="feature-content">
                     <h3>Note and Voice Note</h3>
@@ -60,7 +61,7 @@
             </div>
             <div class="feature-box2">
                 <div class="feature-icon">
-                    <img src="assets/IconToDo.png" alt="To-Do List Icon">
+                    <img src="assets/IconToDo.png" alt="To-Do List Icon" style="width: 200px">
                 </div>
                 <div class="feature-content">
                     <h3>To-Do List</h3>
@@ -72,7 +73,7 @@
             </div>
             <div class="feature-box2">
                 <div class="feature-icon">
-                    <img src="assets/IconReminder.png" alt="Reminder Icon">
+                    <img src="assets/IconReminder.png" alt="Reminder Icon" style="width: 200px">
                 </div>
                 <div class="feature-content">
                     <h3>Daily Reminder</h3>
@@ -84,7 +85,7 @@
             </div>
             <div class="feature-box1">
                 <div class="feature-icon">
-                    <img src="assets/IconAlarm.png" alt="Alarm Icon">
+                    <img src="assets/IconAlarm.png" alt="Alarm Icon" style="width: 200px">
                 </div>
                 <div class="feature-content">
                     <h3>Alarm Clock</h3>

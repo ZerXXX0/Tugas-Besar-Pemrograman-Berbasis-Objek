@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Space Grotesk';font-size: 22px;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -97,8 +97,9 @@ nav ul li a.login-link {
 }
 
 .hero .btn:hover {
-    background-color: #e55b5b;
-    color: #fff;
+    background-color: white;
+    color: #FF3B65;
+    border: 2px solid #FF3B65;
     transform: scale(1.05);
 }
 
@@ -124,8 +125,12 @@ nav ul li a.login-link {
 
 .features h2 {
     font-size: 2rem;
-    color: #FF3B65;
+    color: white;
+    background-color: #FF3B65;
     margin-bottom: 20px;
+    border-radius: 5px;
+    place-self: baseline;
+    padding: 8px;
 }
 
 /* Feature Boxes */
