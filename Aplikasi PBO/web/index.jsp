@@ -50,51 +50,51 @@
     </section>
 
     <section class="features py-5">
-        <div class="container">
-            <h2 class="text-center text-white bg-danger p-2 rounded-3">Features</h2>
-            <div class="row mt-4">
-                <div class="col-md-6">
-                    <div class="card border-1 shadow-sm">
-                        <div class="card-body text-center">
-                            <h3 class="text-danger">Note and Voice Note</h3>
-                            <img src="assets/IconNote.png" alt="Note Icon" class="img-fluid mb-3" style="max-width: 150px;">
-                            
-                            <a href="#" class="text-danger">Learn more</a>
-                        </div>
+    <div class="container">
+        <h2 class="text-center text-white bg-danger p-2 rounded-3">Features</h2>
+        <div class="feature-boxes mt-4">
+            <div class="feature-box1">
+                <div class="feature-content text-center">
+                    <h3 class="text-white">Note and Voice Note</h3>
+                    <img src="assets/IconNote.png" alt="Note Icon" class="img-fluid mb-3" style="max-width: 150px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <img src="assets/LogoPanah1.png" alt="Arrow Logo" style="width: 40px; height: auto;">
+                        <a href="#" class="text-danger">Learn more</a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card border-0 shadow-sm bg-danger text-white">
-                        <div class="card-body text-center">
-                            <h3>To-Do List</h3>
-                            <img src="assets/IconToDo.png" alt="To-Do List Icon" class="img-fluid mb-3" style="max-width: 150px;">
-                            
-                            <a href="#" class="text-white">Learn more</a>
-                        </div>
+            </div>
+            <div class="feature-box2">
+                <div class="feature-content text-center">
+                    <h3>To-Do List</h3>
+                    <img src="assets/IconToDo.png" alt="To-Do List Icon" class="img-fluid mb-3" style="max-width: 150px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <img src="assets/LogoPanah2.png" alt="Arrow Logo" style="width: 40px; height: auto;">
+                        <a href="#" class="text-white">Learn more</a>
                     </div>
                 </div>
-                <div class="col-md-6 mt-4">
-                    <div class="card border-0 shadow-sm bg-danger text-white">
-                        <div class="card-body text-center">
-                            <h3>Daily Reminder</h3>
-                            <img src="assets/IconReminder.png" alt="Reminder Icon" class="img-fluid mb-3" style="max-width: 150px;">
-                            
-                            <a href="#" class="text-white">Learn more</a>
-                        </div>
+            </div>
+            <div class="feature-box2 mt-4">
+                <div class="feature-content text-center">
+                    <h3>Daily Reminder</h3>
+                    <img src="assets/IconReminder.png" alt="Reminder Icon" class="img-fluid mb-3" style="max-width: 150px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <img src="assets/LogoPanah2.png" alt="Arrow Logo" style="width: 40px; height: auto;">
+                        <a href="#" class="text-white">Learn more</a>
                     </div>
                 </div>
-                <div class="col-md-6 mt-4">
-                    <div class="card border-0">
-                        <div class="card-body text-center">
-                            <h3 class="text-danger">Alarm Clock</h3>
-                            <img src="assets/IconAlarm.png" alt="Alarm Icon" class="img-fluid mb-3" style="max-width: 150px;">
-                            
-                            <a href="#" class="text-danger">Learn more</a>
-                        </div>
+            </div>
+            <div class="feature-box1 mt-4">
+                <div class="feature-content text-center">
+                    <h3 class="text-white">Alarm Clock</h3>
+                    <img src="assets/IconAlarm.png" alt="Alarm Icon" class="img-fluid mb-3" style="max-width: 150px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <img src="assets/LogoPanah1.png" alt="Arrow Logo" style="width: 40px; height: auto;">
+                        <a href="#" class="text-danger">Learn more</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <footer class="bg-danger text-white text-center py-4">

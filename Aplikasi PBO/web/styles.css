@@ -208,7 +208,7 @@ nav ul li a.login-link {
 }
 
 .text-danger {
-    color: #FF3B65;
+    color: #FF3B65 !important;
     text-align: left;
 }
 
@@ -258,7 +258,9 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
-
+.bg-danger {
+    background-color: #FF3B65 !important;
+}
 footer p {
     margin: 10px 0;
 }
