@@ -1,30 +1,38 @@
+/* Global Styles */
 body {
-    font-family: 'Space Grotesk';font-size: 22px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
     margin: 0;
     padding: 0;
     background-color: #fff;
 }
 
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
 header {
     background-color: #fff;
     padding: 20px 40px;
     border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .logo img {
-    width: 150px;  /* Adjust logo size */
+    width: 150px; /* Adjust logo size */
     height: auto;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-}
-
+/* Navigation */
 nav ul {
     display: flex;
     list-style: none;
@@ -45,15 +53,18 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
+
+
 nav ul li a:hover {
-    background-color: #FF3B65;
-    color: white;
+    background-color: #FF3B65 !important; 
+    color: white !important;
 }
 
 nav ul li a.login-link {
     border: 2px solid #FF3B65;
 }
 
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: center;
@@ -115,18 +126,17 @@ nav ul li a.login-link {
     height: auto;
 }
 
-/* Styling for the features section */
+/* Features Section */
 .features {
-    text-align: left;
     padding: 40px 20px;
     background-color: white;
-    margin-top: 40px;
 }
+
 
 .features h2 {
     font-size: 2rem;
     color: white;
-    background-color: #FF3B65;
+    background-color: #FF3B65 !important;
     margin-bottom: 20px;
     border-radius: 5px;
     place-self: baseline;
@@ -195,6 +205,11 @@ nav ul li a.login-link {
     display: inline-block;
     text-align: left;
     margin-bottom: 17px;
+}
+
+.text-danger {
+    color: #FF3B65;
+    text-align: left;
 }
 
 .feature-box2 a {
