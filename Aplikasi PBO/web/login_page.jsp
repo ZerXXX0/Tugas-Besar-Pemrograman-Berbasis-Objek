@@ -11,38 +11,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - ASSISTIFY 2025</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Space+Grotesk' rel='stylesheet'>
     <link rel="stylesheet" href="login_page.css">
-    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="container d-flex justify-content-between py-3">
             <a href="index.jsp">
-                <img src="assets/Logo.png" alt="ASSISTIFY Logo"> <!-- Logo image -->
+                <img src="assets/Logo.png" alt="ASSISTIFY Logo" class="img-fluid" style="max-width: 150px;"> <!-- Logo image -->
             </a>
         </div>
     </header>
 
-    <section class="login-section">
-        <div class="login-container">
-            <h2>Log In</h2>
+    <section class="login-section d-flex justify-content-center align-items-center vh-100">
+        <div class="login-container bg-danger text-white p-5 rounded shadow-lg" style="width: 500px;">
+            <h2 class="text-center mb-4">Log In</h2>
             <form action="/login" method="POST">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
 
-                <button type="submit">Log In</button>
+                <button type="submit" class="btn btn-light w-100 py-2">Log In</button>
             </form>
-            <p class="signup-link">Don't have an account? <a href="registration_page.jsp">Click here</a></p>
 
+            <p class="mt-3 text-center">
+                Don't have an account? <a href="registration_page.jsp" class="text-white text-decoration-none">Click here</a>
+            </p>
         </div>
     </section>
 
-    <footer>
+    <footer class="bg-danger text-white text-center py-3">
         <p>&copy; 2025 Assistify. All rights reserved.</p>
-        <p>Powered by <a href="#">Assistify Technologies</a></p>
+        <p>Powered by <a href="#" class="text-white text-decoration-none">Assistify Technologies</a></p>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb3+KnujsUR6g7U95RkFq3bRQGzVf0X0R9BcXsSm6a1T3McDGH" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></script>
 </body>
 </html>
