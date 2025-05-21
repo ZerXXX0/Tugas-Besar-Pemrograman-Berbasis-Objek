@@ -107,7 +107,7 @@
 
     <footer class="bg-danger text-white text-center py-4">
         <p>&copy; 2025 Assistify. All rights reserved.</p>
-        <p>Powered by <a href="#" class="text-white text-decoration-none">Assistify Technologies</a></p>
+        <p>Powered by <a href="#" class="text-white text-decoration-none klik">Assistify Technologies</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka9H3GMh7dQssI40c5n8O11Fpb0pSQZxQSTH5tf9QmjAcqfOgnMw2uZxtFsiqgdF" crossorigin="anonymous"></script>

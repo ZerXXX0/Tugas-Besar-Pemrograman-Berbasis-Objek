@@ -58,6 +58,10 @@ nav ul li a:hover {
     color: white;
 }
 
+.klik:hover {
+    text-decoration: underline !important;
+}
+
 /* Login Page Section */
 .login-section {
     display: flex;
@@ -95,8 +99,8 @@ nav ul li a:hover {
 .login-container input {
     width: 100%;
     margin-bottom: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
@@ -160,5 +164,9 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.klik:hover {
+    text-decoration: underline !important;
 }
 

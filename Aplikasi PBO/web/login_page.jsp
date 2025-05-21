@@ -18,15 +18,15 @@
 </head>
 <body>
     <header>
-        <div class="container d-flex justify-content-between py-3">
+        <div class="d-flex justify-content-between align-items-center">
             <a href="index.jsp">
                 <img src="assets/Logo.png" alt="ASSISTIFY Logo" class="img-fluid" style="max-width: 150px;"> <!-- Logo image -->
             </a>
         </div>
     </header>
 
-    <section class="login-section d-flex justify-content-center align-items-center vh-100">
-        <div class="login-container bg-danger text-white p-5 rounded shadow-lg" style="width: 500px;">
+    <section class="login-section d-flex justify-content-center align-items-center">
+        <div class="login-container text-white p-5 rounded shadow-lg" style="width: 500px;">
             <h2 class="text-center mb-4">Log In</h2>
             <form action="/login" method="POST">
                 <div class="mb-3">
@@ -39,18 +39,18 @@
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
 
-                <button type="submit" class="btn btn-light w-100 py-2">Log In</button>
+                <button type="submit" class="btn btn-light mt-5 w-100 py-3">Log In</button>
             </form>
 
-            <p class="mt-3 text-center">
-                Don't have an account? <a href="registration_page.jsp" class="text-white text-decoration-none">Click here</a>
+            <p class="mt-1 pt-4 text-center">
+                Don't have an account? <a href="registration_page.jsp" class="text-white text-decoration-none klik">Click here</a>
             </p>
         </div>
     </section>
 
-    <footer class="bg-danger text-white text-center py-3">
+    <footer class="text-white text-center py-3">
         <p>&copy; 2025 Assistify. All rights reserved.</p>
-        <p>Powered by <a href="#" class="text-white text-decoration-none">Assistify Technologies</a></p>
+        <p>Powered by <a href="#" class="text-white text-decoration-none klik">Assistify Technologies</a></p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
