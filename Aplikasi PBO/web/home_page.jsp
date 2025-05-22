@@ -103,10 +103,17 @@
         }
         .settings-link {
             position: absolute;
+            padding: .5rem 1rem;
             bottom: 20px;
-            left: 10px;
             font-size: 18px;
             color: white;
+        }
+        
+        .settings-link:hover {
+            color: #000;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+            background-color: white;
+            border-radius: 5px;    
         }
     </style>
 </head>
@@ -115,7 +122,7 @@
     <!-- Profile Icon with Name -->
     <div class="profile-container">
         <a href="profile.jsp" class="profile-icon">
-            <img src="assets/Avatar.png.png" alt="Profile" style="width: 20px; height: 20px;" class="profile-icon" id="profile-icon">
+            <img src="assets/Avatar.png" alt="Profile" style="width: 40px; height: 40px;" class="profile-icon" id="profile-icon">
         </a>
         <span class="profile-name">FansaGantenk</span>
     </div>
@@ -128,32 +135,32 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Home Link with Image Icon -->
-        <a href="#" class="nav-link">
+        <a href="home_page.jsp?page=home" class="nav-link <%= request.getParameter("page") == null || request.getParameter("page").equals("home") ? "active" : "" %>">
             <img src="assets/LogoHome.png" alt="Home" style="width: 40px; height: 40px;" class="sidebar-icon" id="home-icon">
         </a>
         
         <!-- Alarm Link with Image Icon -->
-        <a href="#" class="nav-link">
+        <a href="home_page.jsp?page=alarm" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("alarm") ? "active" : "" %>">
             <img src="assets/LogoAlarm.png" alt="Alarm" style="width: 40px; height: 40px;" class="sidebar-icon" id="alarm-icon">
         </a>
         
         <!-- Notification Link with Image Icon -->
-        <a href="#" class="nav-link">
+        <a href="home_page.jsp?page=reminder" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("reminder") ? "active" : "" %>">
             <img src="assets/LogoNotif.png" alt="Notification" style="width: 40px; height: 40px;" class="sidebar-icon" id="notif-icon">
         </a>
         
         <!-- Notes Link with Image Icon -->
-        <a href="#" class="nav-link">
+        <a href="home_page.jsp?page=note" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("note") ? "active" : "" %>">
             <img src="assets/LogoNotes.png" alt="Notes" style="width: 40px; height: 40px;" class="sidebar-icon" id="notes-icon">
         </a>
         
         <!-- Calendar Link with Image Icon -->
-        <a href="#" class="nav-link">
+        <a href="home_page.jsp?page=calendar" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("calendar") ? "active" : "" %>">
             <img src="assets/LogoCalendar.png" alt="Calendar" style="width: 40px; height: 40px;" class="sidebar-icon" id="calendar-icon">
         </a>
         
         <!-- To-Do Link with Image Icon -->
-        <a href="#" class="nav-link">
+        <a href="home_page.jsp?page=todolist" class="nav-link <%= request.getParameter("page") != null && request.getParameter("page").equals("todolist") ? "active" : "" %>">
             <img src="assets/LogoToDoList.png" alt="To-Do" style="width: 40px; height: 40px;" class="sidebar-icon" id="todo-icon">
         </a>
         
@@ -163,117 +170,28 @@
         </a>
     </div>
 
-    <!-- Main Content -->
-    <div class="content">
-        <!-- Header -->
-        <div class="d-flex justify-content-between align-items-center mt-5">
-            <h1>Hello, FansaGantenk!</h1>
-        </div>
-        <div class="d-flex justify-content-between align-items-center mb-5">
-            <p>What can I do for you today?</p>
-        </div>
+        <%
+            String p = request.getParameter("page");
+            if (p == null) {
+                p = "home";
+            }
+        %>
 
-        <!-- Today Section -->
-        <div class="row">
-            <h2>Today</h2> <!-- Added "Today" label here -->
-            <!-- To-Do List Card -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        To-Do List
-                    </div>
-                    <ul class="todo-list">
-                        <li>Not snitchin' on gang</li>
-                        <li>Sell dope</li>
-                        <li>Rob a nigga</li>
-                        <li>Get money</li>
-                        <li>Rep the set</li>
-                        <li>Pop the opp</li>
-                        <li>Buy some milk</li>
-                        <li>Visit baby mama</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Alarm Card -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        Alarm
-                    </div>
-                    <ul class="alarm-list">
-                        <li>08:00 Wake tf up</li>
-                        <li>16:00 Wake tf up</li>
-                        <li>23:00 Smoke weed errday</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Reminder Card -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        Reminder
-                    </div>
-                    <ul class="reminder-list">
-                        <li>08:00 Get some help</li>
-                        <li>16:00 Slide on opp</li>
-                        <li>23:00 Smoke weed errday</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="form-container">
+            <% if (p.equals("home")) { %>
+                <jsp:include page="home.jsp" flush="false"></jsp:include>
+            <% } else if(p.equals("alarm")) { %>
+                <jsp:include page="alarm.jsp" flush="false"></jsp:include>
+            <% } else if(p.equals("reminder")) { %>
+                <jsp:include page="reminder.jsp" flush="false"></jsp:include>
+            <% } else if(p.equals("note")) { %>
+                <jsp:include page="note.jsp" flush="false"></jsp:include>
+            <% } else if(p.equals("calendar")) { %>
+                <jsp:include page="calendar.jsp" flush="false"></jsp:include>
+            <% } else if(p.equals("todolist")) { %>
+                <jsp:include page="todolist.jsp" flush="false"></jsp:include>
+            <% } %>
         </div>
-
-        <!-- Notes and Voice Note -->
-        <div class="row mt-4">
-            <!-- Note Card -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Note
-                    </div>
-                    <p>Got a top from a stripper bitch</p>
-                    <p>She from Kankakee</p>
-                </div>
-            </div>
-            <!-- Voice Note Card -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Voice Note
-                    </div>
-                    <audio controls>
-                        <source src="your-voice-note-file.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tomorrow Section (Same structure as today) -->
-        <div class="row mt-4">
-            <h2>Tomorrow</h2> <!-- Added "Tomorrow" label here -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Tomorrow's Alarm
-                    </div>
-                    <ul class="alarm-list">
-                        <li>08:00 Wake tf up</li>
-                        <li>16:00 Wake tf up</li>
-                        <li>23:00 Smoke weed errday</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Tomorrow's Note
-                    </div>
-                    <p>Just got a top from a stripper bitch</p>
-                    <p>She from Kankakee...</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka9H3GMh7dQssI40c5n8O11Fpb0pSQZxQSTH5tf9QmjAcqfOgnMw2uZxtFsiqgdF" crossorigin="anonymous"></script>
