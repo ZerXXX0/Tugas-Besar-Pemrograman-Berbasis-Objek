@@ -316,14 +316,14 @@
         };
 
         document.getElementById("todo-icon").onmouseover = function() {
-            this.src = "assets/LogoToDoListHover.png";
+            this.src = "assets/ToDoListHover.png";
         };
         document.getElementById("todo-icon").onmouseout = function() {
             this.src = "assets/LogoToDoList.png";
         };
 
         document.getElementById("settings-icon").onmouseover = function() {
-            this.src = "assets/LogoSettingHover.png";
+            this.src = "assets/SettingHover.png";
         };
         document.getElementById("settings-icon").onmouseout = function() {
             this.src = "assets/LogoSetting.png";
