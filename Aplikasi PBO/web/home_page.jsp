@@ -122,7 +122,7 @@
 
     <!-- Add Icon -->
     <a href="add_task.jsp" class="add-icon">
-        <i class="fas fa-plus-circle"></i>
+        <img src="assets/Avatar.png.png" alt="Profile" style="width: 20px; height: 20px;" class="profile-icon" id="profile-icon">
     </a>
 
     <!-- Sidebar -->
