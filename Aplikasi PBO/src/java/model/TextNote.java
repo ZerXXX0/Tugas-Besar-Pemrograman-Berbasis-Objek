@@ -37,6 +37,4 @@ public class TextNote extends Note {
     public void setNote(String note) {
         this.note = note;
     }
-    
-    
 }
