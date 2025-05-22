@@ -57,7 +57,7 @@ public class JournalEntry {
         this.entryDate = entryDate;
     }
     
-    public static JournalEntry getJournalEntrybyId(DB db, int id) {
+    public static JournalEntry getJournalEntryById(DB db, int id) {
         JournalEntry journalEntry = null;
         String query = "SELECT * FROM JournalEntry WHERE id = " + id;
         ResultSet rs = db.getData(query);
