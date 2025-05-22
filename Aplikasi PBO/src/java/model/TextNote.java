@@ -29,7 +29,7 @@ public class TextNote extends Note {
                 + this.note + "')";
         db.runQuery(query);
         System.out.println("Creating Text Note: " + getTitle() + ", at: " + getCreatedDate());
-
+    }
         
     public void showNote(){
         System.out.println("Text Note: " + this.note);
@@ -42,7 +42,7 @@ public class TextNote extends Note {
         this.note = newNote;
         System.out.println("Text Note edited: " + note);
         }
-    }
+    
     
     public String getNote() {
         return note;
