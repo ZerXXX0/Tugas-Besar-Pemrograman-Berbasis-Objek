@@ -115,14 +115,14 @@
     <!-- Profile Icon with Name -->
     <div class="profile-container">
         <a href="profile.jsp" class="profile-icon">
-            <i class="fas fa-user-circle"></i>
+            <img src="assets/Avatar.png.png" alt="Profile" style="width: 20px; height: 20px;" class="profile-icon" id="profile-icon">
         </a>
         <span class="profile-name">FansaGantenk</span>
     </div>
 
     <!-- Add Icon -->
     <a href="add_task.jsp" class="add-icon">
-        <img src="assets/Avatar.png.png" alt="Profile" style="width: 20px; height: 20px;" class="profile-icon" id="profile-icon">
+        <i class="fas fa-plus-circle"></i>
     </a>
 
     <!-- Sidebar -->
