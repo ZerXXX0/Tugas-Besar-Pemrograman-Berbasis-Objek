@@ -4,8 +4,6 @@
  */
 package model;
 
-import java.time.LocalDateTime;
-
 /**
  *
  * @author Fathan Fardian Sanum
@@ -26,7 +24,7 @@ public class TextNote extends Note {
         System.out.println("Text Note: " + note);
     }
     
-    public void editNote() {
+    public void editNote(String newNote) {
         this.note = newNote;
         System.out.println("Text Note edited: " + note);
     }
