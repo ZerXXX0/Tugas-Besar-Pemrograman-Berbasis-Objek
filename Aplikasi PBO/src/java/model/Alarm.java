@@ -4,6 +4,7 @@
  */
 package model;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 /**
  *
@@ -18,18 +19,26 @@ public class Alarm implements Inotifiable{
         this.status = status;
     }
     
-    public void activate() {
-        
+    public void activate(DB db) {
+        String query = "INSERT INTO Alarm (status, time) VALUES ('" + this.status + "', '" + Timestamp.valueOf(this.time) + ")";
+        db.runQuery(query);
+        this.status = "active";
+        System.out.println("Alarm activated at: " + time);
+
     }
     
-    public void deactivate() {
-        
+    public void deactivate(DB db, int id) {
+        String query = "DELETE FROM User WHERE id = " + id;
+        db.runQuery(query);
+        this.status = "inactive";
+        System.out.println("Alarm deactivated at: " + time);
     }
     
     @Override
     public void sendNotification() {
-        
+        System.out.println("Sending notification: Alarm " + status + " at " + time);
     }
+    
     public LocalDateTime getTime() {
         return time;
     }
