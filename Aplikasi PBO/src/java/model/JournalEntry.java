@@ -20,11 +20,11 @@ public class JournalEntry {
     }
     
     public void addEntry(){
-        
+        String query = "INSERT INTO JournalEntry (content, entryDate) VALUES (?,?)";
     }
     
-    public void editEntry(){
-        
+    public void EditEntry(){
+        String query = "UPDATE JournalEntry WHERE content= ";
     }
 
     public String getContent() {
