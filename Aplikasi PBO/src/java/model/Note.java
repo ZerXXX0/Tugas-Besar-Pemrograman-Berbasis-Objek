@@ -35,5 +35,5 @@ public abstract class Note {
         this.createdDate = createdDate;
     }
     
-    public abstract void createNode();
+    public abstract void createNote();
 }
