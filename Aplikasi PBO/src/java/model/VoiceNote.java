@@ -8,6 +8,8 @@ import javazoom.jl.player.Player;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -16,21 +18,22 @@ import java.io.InputStream;
 public class VoiceNote extends Note{
     private String path;
     private Player player;
+    private int id;
     
-    public VoiceNote(String path){
-        super();
+    
+    public VoiceNote(int id, String title, LocalDateTime createdDate, String path) {
+        super(title, createdDate);
+        this.id = id; // if your Note class or table has primary key
         this.path = path;
     }
     
-    public void play(){
-        try{
-            InputStream inputsStream = new FileInputStream(path);
+    public void play() {
+        try {
+            InputStream inputStream = new FileInputStream(path);
             player = new Player(inputStream);
             player.play();
-        } catch (FileNothoe FoundException e){
-            System.out.println(path);
-        } catch (Exception e){
-            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
     
@@ -41,7 +44,18 @@ public class VoiceNote extends Note{
         }
     }
     
-     public String getPath() {
+    public String getPath() {
         return path;
+    }
+
+    @Override
+    public void createNote(DB db) {
+        String query;
+        query = "INSERT INTO VoiceNote (title, createdDate, path) VALUES ('"
+                + getTitle() + "', '"
+                + Timestamp.valueOf(getCreatedDate()) + "', '"
+                + this.path + "')";
+        db.runQuery(query);
+        System.out.println("Creating Text Note: " + getTitle() + ", at: " + getCreatedDate());// Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
