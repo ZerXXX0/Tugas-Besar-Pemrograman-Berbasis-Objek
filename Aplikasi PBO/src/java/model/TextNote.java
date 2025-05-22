@@ -8,6 +8,13 @@ package model;
  *
  * @author Fathan Fardian Sanum
  */
-public class TextNote {
+public class TextNote extends Note {
+    private String note;
     
+    public TextNote(String note ) {
+        this.note = note;
+        
+        
+     
+    }
 }
