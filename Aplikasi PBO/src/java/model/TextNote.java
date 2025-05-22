@@ -13,8 +13,27 @@ public class TextNote extends Note {
     
     public TextNote(String note ) {
         this.note = note;
-        
-        
-     
     }
+
+    public void createNote() {
+        
+    }
+    
+    public void showNote() {
+        
+    }
+    
+    public void editNote() {
+        
+    }
+    
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+    
+    
 }
