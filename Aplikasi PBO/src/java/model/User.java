@@ -26,12 +26,20 @@ public class User {
         
     }
     
-    public void editProfile(){
-        
+    public void editProfile(DB db, String newUsername, String newEmail){
+        String query = "UPDATE User SET username = '" + newUsername + "', email = '" + newEmail + "' WHERE id = " + this.id;
+        db.runQuery(query);
+
+    
+        this.username = newUsername;
+        this.email = newEmail;
     }
     
-    public void editPassword(){
-        
+    public void editPassword(DB db, String newPassword){
+        String query = "UPDATE User SET password = '" + newPassword + "' WHERE id = " + this.id;
+        db.runQuery(query);
+
+    this.password = newPassword; 
     }
     
     public String getUsername() {
