@@ -16,27 +16,32 @@ import java.sql.SQLException;
 public class TextNote extends Note {
     private String note;
     
-    public TextNote(String note ) {
+    public TextNote(String title, LocalDateTime createdDate, String note) {
         super(title, createdDate);
         this.note = note;
     }
     
-    public void createNote(DB db) {
-        String query = "INSERT INTO TextNote (title, createdDate, note) VALUES ('" + getTitle() + "', '" + Timestamp.valueOf(getCreatedNote()) + "', '" + this.note + "')";
+    @Override
+    public void createNote(DB db){
+        String query = "INSERT INTO TextNote (title, createdDate, note) VALUES ('"
+                + getTitle() + "', '"
+                + Timestamp.valueOf(getCreatedDate()) + "', '"
+                + this.note + "')";
         db.runQuery(query);
         System.out.println("Creating Text Note: " + getTitle() + ", at: " + getCreatedDate());
+
+        
+    public void showNote(){
+        System.out.println("Text Note: " + this.note);
     }
     
-    public void showNote() {
-        System.out.println("Text Note: " + note);
-    }
     
-    public void editNote(String newNote) {
+    public void editNote(DB db, String newNote) {
         String query = "UPDATE TextNote SET note ='" + this.note + "' WHERE title ='" + getTitle() + "'";
         db.runQuery(query);
         this.note = newNote;
         System.out.println("Text Note edited: " + note);
-    }
+        }
     }
     
     public String getNote() {
