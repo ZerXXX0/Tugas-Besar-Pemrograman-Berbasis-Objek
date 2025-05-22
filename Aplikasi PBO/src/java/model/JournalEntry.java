@@ -8,6 +8,7 @@ package model;
  *
  * @author Fathan Fardian Sanum
  */
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 public class JournalEntry {
@@ -19,12 +20,13 @@ public class JournalEntry {
         this.entryDate = entryDate;
     }
     
-    public void addEntry(){
-        String query = "INSERT INTO JournalEntry (content, entryDate) VALUES (?,?)";
+    public void addEntry(DB db){
+        String query = "INSERT INTO JournalEntry (content, entryDate) VALUES ('" + this.getContent() + "', '" + Timestamp.valueOf(this.entryDate) + "')";
+        db.runQuery(query);
     }
     
     public void EditEntry(){
-        String query = "UPDATE JournalEntry WHERE content= ";
+        
     }
 
     public String getContent() {
