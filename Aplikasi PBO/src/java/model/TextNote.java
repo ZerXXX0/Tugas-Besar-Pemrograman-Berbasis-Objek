@@ -6,8 +6,6 @@ package model;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  *
@@ -20,6 +18,7 @@ public class TextNote extends Note {
         super(title, createdDate);
         this.note = note;
     }
+    
     
     @Override
     public void createNote(DB db){
