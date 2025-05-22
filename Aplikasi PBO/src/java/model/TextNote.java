@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Fathan Fardian Sanum
@@ -16,7 +18,9 @@ public class TextNote extends Note {
         this.note = note;
     }
     
-    public void createNote() {
+    public void createNote(DB db, String title, LocalDateTime createdDate) {
+        String query = "INSERT INTO TextNote (title, createdDate, note) VALUES ('" + this. + "', '" + Timestamp.valueOf(this.time) + "', " + this.taskId + ")";
+        db.runQuery(query);
         System.out.println("Creating Text Note: " + getTitle() + ", at: " + getCreatedDate());
     }
     
@@ -25,6 +29,8 @@ public class TextNote extends Note {
     }
     
     public void editNote(String newNote) {
+        String query = "INSERT INTO TextNote (title, createdDate, note) VALUES ('" + this. + "', '" + Timestamp.valueOf(this.time) + "', " + this.taskId + ")";
+        db.runQuery(query);
         this.note = newNote;
         System.out.println("Text Note edited: " + note);
     }
