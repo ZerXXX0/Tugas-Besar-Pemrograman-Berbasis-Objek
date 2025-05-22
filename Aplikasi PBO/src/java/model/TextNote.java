@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Fathan Fardian Sanum
@@ -15,7 +17,7 @@ public class TextNote extends Note {
         super(title, createdDate);
         this.note = note;
     }
-
+    
     public void createNote() {
         System.out.println("Creating Text Note: " + getTitle() + ", at: " + getCreatedDate());
     }
