@@ -1,4 +1,8 @@
 package model;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import util.DB;
+
 
 public class User {
     private int id;
@@ -18,29 +22,26 @@ public class User {
         db.runQuery(query);
     }
     
-    public void logIn(){
-        
+     public boolean logIn(DB db) {
+        String query = "SELECT * FROM user WHERE username = '" + this.username +
+                       "' AND password = '" + this.password + "'";
+        ResultSet rs = db.runQueryWithResult(query);
+        try {
+            if (rs != null && rs.next()) {
+                this.id = rs.getInt("id");
+                this.email = rs.getString("email");
+                return true;
+            }
+        } catch (SQLException e) {
+            System.out.println("Login error: " + e.getMessage());
+        }
+        return false;
     }
     
     public void logOut(){
         
     }
-    
-    public void editProfile(DB db, String newUsername, String newEmail){
-        String query = "UPDATE User SET username = '" + newUsername + "', email = '" + newEmail + "' WHERE id = " + this.id;
-        db.runQuery(query);
-
-    
-        this.username = newUsername;
-        this.email = newEmail;
-    }
-    
-    public void editPassword(DB db, String newPassword){
-        String query = "UPDATE User SET password = '" + newPassword + "' WHERE id = " + this.id;
-        db.runQuery(query);
-
-    this.password = newPassword; 
-    }
+   
     
     public String getUsername() {
         return username;
@@ -64,5 +65,21 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+        public void editProfile(DB db, String newUsername, String newEmail){
+        String query = "UPDATE User SET username = '" + newUsername + "', email = '" + newEmail + "' WHERE id = " + this.id;
+        db.runQuery(query);
+
+    
+        this.username = newUsername;
+        this.email = newEmail;
+    }
+    
+    public void editPassword(DB db, String newPassword){
+        String query = "UPDATE User SET password = '" + newPassword + "' WHERE id = " + this.id;
+        db.runQuery(query);
+
+    this.password = newPassword; 
     }
 }
