@@ -7,15 +7,12 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
-                    <file>${file.reference.mysql-connector-java-8.0.27.jar}</file>
-<<<<<<< HEAD
-=======
+                    <file>${file.reference.jlayer-1.0.1.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
-                    <file>${file.reference.jlayer-1.0.1.jar}</file>
+                    <file>${file.reference.mysql-connector-java-8.0.27.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
->>>>>>> ee1924fbd36802be87315e0d65b2a1c6d449bdcd
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
